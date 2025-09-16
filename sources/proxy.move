@@ -1,10 +1,10 @@
-module metaxtrade::proxy {
+module dexrouter::proxy {
     use std::signer;
     use aptos_framework::account;
     use aptos_framework::coin;
 
-    friend metaxtrade::router;
-    friend metaxtrade::aggregator;
+    friend dexrouter::router;
+    friend dexrouter::aggregator;
 
     const SEED: vector<u8> = b"okx.dex.escrow.account.5";
 

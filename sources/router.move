@@ -1,11 +1,11 @@
-module metaxtrade::router {
+module dexrouter::router {
 
     // Friends
-    friend metaxtrade::aggregator;
+    friend dexrouter::aggregator;
 
     // library
 
-    use metaxtrade::proxy;
+    use dexrouter::proxy;
 
     use aptos_framework::coin;
     use aptos_framework::fungible_asset::Metadata;

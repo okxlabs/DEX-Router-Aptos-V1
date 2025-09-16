@@ -1,4 +1,4 @@
-module metaxtrade::aggregator {
+module dexrouter::aggregator {
     use aptos_framework::coin;
     use aptos_framework::timestamp;
     use aptos_framework::fungible_asset::Metadata;
@@ -10,8 +10,8 @@ module metaxtrade::aggregator {
     use std::signer;
     use std::vector;
 
-    use metaxtrade::router;
-    use metaxtrade::proxy;
+    use dexrouter::router;
+    use dexrouter::proxy;
 
     // ERRORS
     // const E_UNKNOWN_POOL_TYPE: u64 = 1;          #delete-redundancy-variables
