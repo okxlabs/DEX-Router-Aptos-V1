@@ -1,5 +1,5 @@
 
-# dexrouter - Aptos DEX Aggregator
+# Dexrouter - Aptos DEX Aggregator
 
 Dexrouter is a decentralized exchange aggregator built on Aptos blockchain that provides optimal trading routes across multiple DEXs, ensuring users get the best prices for their trades.
 
