@@ -1,6 +1,0 @@
-[package]
-name = "liquidswap_bridge"
-version = "0.0.0"
-
-[addresses]
-liquidswap_bridge = "0x808b4ffe04011cd20327a910518b4bff661f73fa907e9fc41ad690f84fa6f83e"

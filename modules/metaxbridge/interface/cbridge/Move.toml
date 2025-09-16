@@ -1,6 +1,0 @@
-[package]
-name = "cbridge"
-version = "0.0.0"
-
-[addresses]
-cbridge = "0x4dd8a22e95f3ec2448ee1cc6634298024095ce8baa3031650b3852af6e2d41d0"
