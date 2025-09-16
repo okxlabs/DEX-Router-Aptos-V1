@@ -1,0 +1,16 @@
+[package]
+name = "hippo_adapter"
+version = "0.0.0"
+
+# set 
+[addresses]
+hippo_adapter = "cb95e54bf4baa46bfc6748ef979edca6199a923df3d0757d896a7dc93514a19b"
+
+
+[dependencies]
+hippo-swap = { local = "../../modules/hippo-swap" }
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+subdir = "aptos-move/framework/aptos-framework"
+rev = 'mainnet_aptos-cli-v1.0.0'

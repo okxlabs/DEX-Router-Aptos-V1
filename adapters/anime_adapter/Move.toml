@@ -1,0 +1,15 @@
+[package]
+name = "anime_adapter"
+version = "0.0.0"
+
+[addresses]
+anime_adapter = "0xf30a1e5c4f1215b444107cce6f448a77b47475656b6b6fd35c4266c330ea8b4e"
+
+
+[dependencies]
+AnimeSwapV1 = { local = "../../interface/animeswap" }
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+subdir = "aptos-move/framework/aptos-framework"
+rev = 'mainnet_aptos-cli-v1.0.0'

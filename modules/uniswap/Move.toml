@@ -1,0 +1,17 @@
+[package]
+name = "uniswapv2"
+version = "1.0.0"
+
+[addresses]
+uniswapv2 = "b82e0420c4c10eacd5fae773dc6b53bfe84f5b03ae5af029057fe785ed70c91f"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+subdir = "aptos-move/framework/aptos-framework"
+rev = 'mainnet_aptos-cli-v1.0.0'
+
+[dependencies.AptosStdlib]
+git = "https://github.com/aptos-labs/aptos-core.git"
+subdir = "aptos-move/framework/aptos-stdlib/"
+rev = 'mainnet_aptos-cli-v1.0.0'
+

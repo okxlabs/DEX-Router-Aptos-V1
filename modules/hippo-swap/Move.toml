@@ -1,0 +1,19 @@
+[package]
+name = "hippo-swap"
+version = "0.0.1"
+
+[dependencies]
+CoinList = { local = "../aptos-coin-list" }
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+subdir = "aptos-move/framework/aptos-framework"
+rev = 'mainnet_aptos-cli-v1.0.0'
+
+[dependencies.AptosStdlib]
+git = "https://github.com/aptos-labs/aptos-core.git"
+subdir = "aptos-move/framework/aptos-stdlib/"
+rev = 'mainnet_aptos-cli-v1.0.0'
+
+[addresses]
+hippo_swap = "b82e0420c4c10eacd5fae773dc6b53bfe84f5b03ae5af029057fe785ed70c91f"
