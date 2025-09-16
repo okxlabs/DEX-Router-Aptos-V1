@@ -1,0 +1,18 @@
+[package]
+name = 'Econia'
+version = '3.0.0' # Per SemVer
+upgrade_policy = 'compatible'
+
+[addresses]
+econia = 'b1d4c0de8bc24468608637dfdbff975a0888f8935aa63338a44078eec5c7b6c7'
+# Mock users for unit tests
+user = '0x1234'
+user_0 = '0x2345'
+user_1 = '0x3456'
+user_2 = '0x4567'
+user_3 = '0x5678'
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+subdir = "aptos-move/framework/aptos-framework"
+rev = 'mainnet_aptos-cli-v1.0.0'
