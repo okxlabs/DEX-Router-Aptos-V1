@@ -19,13 +19,6 @@ MetaXTrade is a decentralized exchange aggregator built on Aptos blockchain that
 - ✅ Cellana
 - ✅ Hyperion
 
-**Available Adapters:**
-- AnimeSwap
-- Basiq DEX
-- Econia
-- Hippo DEX
-
-
 ## 🚀 Quick Start
 
 ### 1. Initialize Account
