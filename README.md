@@ -1,7 +1,7 @@
 
-# MetaXTrade - Aptos DEX Aggregator
+# dexrouter - Aptos DEX Aggregator
 
-MetaXTrade is a decentralized exchange aggregator built on Aptos blockchain that provides optimal trading routes across multiple DEXs, ensuring users get the best prices for their trades.
+Dexrouter is a decentralized exchange aggregator built on Aptos blockchain that provides optimal trading routes across multiple DEXs, ensuring users get the best prices for their trades.
 
 ## 🏗️ Project Architecture
 
@@ -45,6 +45,6 @@ aptos move run --function-id package_address::proxy::init  --profile test_accoun
 
 ### Package Configuration
 Key settings in `Move.toml`:
-- Package name: `metaxtrade`
+- Package name: `dexrouter`
 - Version: `2.0.0`
 - Main address: `0x3faf7a406a14b9cdeb842f9caf23826eb19cc78d11997298b7e0115b193be8a1`
