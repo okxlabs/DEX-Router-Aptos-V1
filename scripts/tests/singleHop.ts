@@ -112,10 +112,11 @@ export async function testHyperion_APT_to_FA() {
                 amountIn: 1000000,        // 0.01 APT
                 minAmountOut: 1,        // Minimum output: 1 unit
                 dexTypes: [DEX.HYPERION],
-                poolTypes: [1],
+                poolTypes: [2],
+                isXToY: [true],
                 faConfig: createFAConfig({
                     outputIsFA: true,
-                    outputFAAddress: FA_ADDRESSES.USDT_FA
+                    outputFAAddress: FA_ADDRESSES.KGEN
                 })
             }
         );
@@ -145,10 +146,71 @@ export async function testHyperion_FA_to_Coin() {
                 amountIn: 10000,   // 0.01 USDT
                 minAmountOut: 1,   
                 dexTypes: [DEX.HYPERION],
-                poolTypes: [1],
+                poolTypes: [2],
+                isXToY: [false],
                 faConfig: createFAConfig({
                     inputIsFA: true,
-                    inputFAAddress: FA_ADDRESSES.USDT_FA
+                    inputFAAddress: FA_ADDRESSES.KGEN
+                })
+            }
+        );
+        
+        console.log("✅ Success:", txHash);
+        console.log(`https://explorer.aptoslabs.com/txn/${txHash}?network=mainnet`);
+    } catch (error) {
+        console.error("❌ Failed:", error.message);
+    }
+}
+
+export async function testHyperion_FA_to_FA() {
+    console.log("\n=== FA -> FA: FA -> APT ===");
+    const user = await getUser();
+    
+    try {
+        const txHash = await executeSwap(
+            user,
+            TOKENS.UPTOS,  // Placeholder type, actual input is FA
+            TOKENS.APT,
+            {
+                amountIn: 10000,   // 0.01 USDT
+                minAmountOut: 1,   
+                dexTypes: [DEX.HYPERION],
+                poolTypes: [0],
+                isXToY: [false],
+                faConfig: createFAConfig({
+                    inputIsFA: true,
+                    outputIsFA: true,
+                    inputFAAddress: FA_ADDRESSES.USDC,
+                    outputFAAddress: FA_ADDRESSES.USD1
+                })
+            }
+        );
+        
+        console.log("✅ Success:", txHash);
+        console.log(`https://explorer.aptoslabs.com/txn/${txHash}?network=mainnet`);
+    } catch (error) {
+        console.error("❌ Failed:", error.message);
+    }
+}
+
+export async function testHyperion_Coin_to_Coin() {
+    console.log("\n=== Coin -> Coin: FA -> APT ===");
+    const user = await getUser();
+    
+    try {
+        const txHash = await executeSwap(
+            user,
+            TOKENS.APT,  // Placeholder type, actual input is FA
+            TOKENS.whUSDC,
+            {
+                amountIn: 10000,   // 0.001 USDT
+                minAmountOut: 1,   
+                dexTypes: [DEX.PANCAKE],
+                poolTypes: [1],
+                isXToY: [true],
+                faConfig: createFAConfig({
+                    inputIsFA: false,
+                    inputFAAddress: FA_ADDRESSES.USDC
                 })
             }
         );
@@ -168,8 +230,10 @@ export async function runAllSingleHopTests() {
     // await testPontemV2_APT_to_UPTOS();
     // await testCellana_APT_to_USDT();
     // await testCellana_APT_to_CELL();
-    // await testHyperion_APT_to_FA();
-    await testHyperion_FA_to_Coin();
+    await testHyperion_APT_to_FA();
+    // await testHyperion_Coin_to_Coin();
+    // await testHyperion_FA_to_FA();
+    // await testHyperion_FA_to_Coin();
 }
 
 // Execute all tests if this file is run directly

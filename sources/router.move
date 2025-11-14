@@ -94,7 +94,7 @@ module dexrouter::router {
                 x_in_amount = coin::balance<X>(signer::address_of(&pda));
             };
 
-            hyperion_adapter::swap<X,Y>(&pda, asset_object_in, asset_object_out, pool_type, x_in_amount, is_in_FA, is_out_FA);
+            hyperion_adapter::swap<X,Y>(&pda, asset_object_in, asset_object_out, pool_type, _is_x_to_y, x_in_amount, is_in_FA, is_out_FA);
             E_NORMAL
         }
         else {
