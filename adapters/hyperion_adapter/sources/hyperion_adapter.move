@@ -6,7 +6,6 @@ module hyperion_adapter::hyperion_adapter {
     use aptos_framework::object::Object;
     use aptos_framework::timestamp;
 
-    use dex_contract::utils;
     use dex_contract::tick_math;
     use dex_contract::partnership;
 
@@ -17,20 +16,20 @@ module hyperion_adapter::hyperion_adapter {
         from_asset: Object<Metadata>,
         to_asset: Object<Metadata>,
         pool_type: u64, // treat pool_type as the index of FEE_RATE_VEC
+        is_x_to_y: bool, // swap direction: true for X->Y, false for Y->X
         amount_in: u64,
-        is_in_FA: bool, // is input a Fungile Asset
-        is_out_FA: bool // is output Fungile Asset
+        is_in_FA: bool, // is input a Fungible Asset
+        is_out_FA: bool // is output a Fungible Asset
     ) {
         let recipient = signer::address_of(user);
         let deadline = timestamp::now_seconds() + 60;
-        let sqrt_price_limit = if (utils::is_sorted(from_asset, to_asset)) {
-            tick_math::min_sqrt_price()
-        } else {
-            tick_math::max_sqrt_price()
-        };
+        
+        // Determine sqrt_price_limit based on swap direction
+        // X->Y: price decreasing, use min; Y->X: price increasing, use max
+        let sqrt_price_limit = if (is_x_to_y) tick_math::min_sqrt_price() else tick_math::max_sqrt_price();
 
         // fee_tier parameter is the index of FEE_RATE_VEC
-        // const FEE_RATE_VEC: vector<u64> = vector[100, 500, 3000, 10000, 1000];
+        // const FEE_RATE_VEC: vector<u64> = vector[100, 500, 3000, 10000, 1000, 2500];
         if ( is_in_FA ) {
             if ( is_out_FA ) {
                 // FA -> FA

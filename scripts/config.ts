@@ -4,7 +4,7 @@
  */
 
 /** Main aggregator module configuration */
-export const MODULE_ADDRESS = "0x3faf7a406a14b9cdeb842f9caf23826eb19cc78d11997298b7e0115b193be8a1";
+export const MODULE_ADDRESS = "0xd7ed3ceeb92c4e5a413e8ad7fab83ced12bf4141a49248a91b5485cb45a0ef4b";
 export const MODULE_NAME = "aggregator";
 
 /** 
@@ -29,6 +29,8 @@ export const TOKENS = {
     USDT: "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT",
     USDT_HYPERION: "0x50788befc1107c0cc4473848a92e5c783c635866ce3c98de71d2eeb7d2a34f85::usdt_coin::USDTether",
     UPTOS: "0x4fbed3f8a3fd8a11081c8b6392152a8b0cb14d70d0414586f0c9b858fcd2d6a7::UPTOS::UPTOS",
+    amAPT: "0x111ae3e5bc816a5e63c2da97d0aa3886519e0cd5e4b046659fa35796bd11542a::amapt_token::AmnisApt",
+    whUSDC: "0x5e156f1207d0ebfa19a9eeff00d62a282278fb8719f4fab3a586a0a2c0fffbea::coin::T",
 } as const;
 
 /**
@@ -38,6 +40,9 @@ export const TOKENS = {
 export const FA_ADDRESSES = {
     CELL: "0x2ebb2ccac5e027a87fa0e2e5f656a3a4238d6a48d93ec9b610d570fc0aa0df12",
     USDT_FA: "0x357b0b74bc833e95a115ad22604854d6b0fca151cecd94111770e5d6ffc9dc2b",
+    KGEN: "0x2a8227993a4e38537a57caefe5e7e9a51327bf6cd732c1f56648f26f68304ebc",
+    USDC: "0xbae207659db88bea0cbead6da0ed00aac12edcdda169e591cd41c94180b46f3b",
+    USD1: "0x05fabd1b12e39967a3c24e91b7b8f67719a6dacee74f3c8b9fb7d93e855437d2",
 } as const;
 
 /** Default curve type used for AMM pools */
