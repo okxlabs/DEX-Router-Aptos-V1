@@ -46,5 +46,5 @@ aptos move run --function-id package_address::proxy::init  --profile test_accoun
 ### Package Configuration
 Key settings in `Move.toml`:
 - Package name: `dexrouter`
-- Version: `2.0.0`
-- Main address: `0x3faf7a406a14b9cdeb842f9caf23826eb19cc78d11997298b7e0115b193be8a1`
+- Version: `2.0.1`
+- Main address: `0xd7ed3ceeb92c4e5a413e8ad7fab83ced12bf4141a49248a91b5485cb45a0ef4b`
