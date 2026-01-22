@@ -204,7 +204,7 @@ export async function testHyperion_Coin_to_Coin() {
             TOKENS.whUSDC,
             {
                 amountIn: 10000,   // 0.001 USDT
-                minAmountOut: 1,   
+                minAmountOut: 0,   
                 dexTypes: [DEX.PANCAKE],
                 poolTypes: [1],
                 isXToY: [true],
@@ -230,8 +230,8 @@ export async function runAllSingleHopTests() {
     // await testPontemV2_APT_to_UPTOS();
     // await testCellana_APT_to_USDT();
     // await testCellana_APT_to_CELL();
-    await testHyperion_APT_to_FA();
-    // await testHyperion_Coin_to_Coin();
+    // await testHyperion_APT_to_FA();
+    await testHyperion_Coin_to_Coin();
     // await testHyperion_FA_to_FA();
     // await testHyperion_FA_to_Coin();
 }

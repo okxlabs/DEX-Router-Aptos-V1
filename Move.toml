@@ -1,10 +1,10 @@
 [package]
 name = "dexrouter"
-version = "2.0.1"
+version = "2.0.2"
 
 [addresses]
-dexrouter = "0xd7ed3ceeb92c4e5a413e8ad7fab83ced12bf4141a49248a91b5485cb45a0ef4b"
-deployer = "0x14b2864b0df3553a864dc8560925309ff05bde4dec5a731b54e6f3cee541ef91"
+dexrouter = "0x7eabd7afead571da80e71bc6d7237102316767f3b617b4efed2dfa04e0ccc2ac"
+deployer = "0xee873ef31945011c4cb684ebeab858cb4cb8a62595b4013a57cd8c6285d2b9a5"
 
 [dependencies]
 pontem_adapter =  {local = "./adapters/pontem_adapter"}

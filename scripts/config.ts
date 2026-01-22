@@ -4,7 +4,7 @@
  */
 
 /** Main aggregator module configuration */
-export const MODULE_ADDRESS = "0xd7ed3ceeb92c4e5a413e8ad7fab83ced12bf4141a49248a91b5485cb45a0ef4b";
+export const MODULE_ADDRESS = "0x7eabd7afead571da80e71bc6d7237102316767f3b617b4efed2dfa04e0ccc2ac";
 export const MODULE_NAME = "aggregator";
 
 /** 

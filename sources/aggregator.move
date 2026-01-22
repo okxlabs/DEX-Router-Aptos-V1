@@ -24,7 +24,7 @@ module dexrouter::aggregator {
     const E_FAULT_OUT_AMOUNT: u64 = 8;
     const E_INVALID_ASSET_OBJECTS_LENGTH: u64 = 9;   
     const E_INVALID_FA_FLAGS_LENGTH: u64 = 10;        
-    const E_INVALID_MIN_OUT: u64 = 11;
+    // const E_INVALID_MIN_OUT: u64 = 11;
 
     //const
     const FA_INFO_LENGTH: u64 = 4;
@@ -304,9 +304,6 @@ module dexrouter::aggregator {
         // Confirm that the length of asset objects and fungible asset flags matches the predefined FA_INFO_LENGTH
         assert!(vector::length(&asset_objects) == FA_INFO_LENGTH, E_INVALID_ASSET_OBJECTS_LENGTH);
         assert!(vector::length(&is_FA) == FA_INFO_LENGTH, E_INVALID_FA_FLAGS_LENGTH);
-
-        // To ensure the slippage check works well
-        assert!(min_out > 0, E_INVALID_MIN_OUT);
 
         // get PDA
         let pda = proxy::get_pda_manager();
